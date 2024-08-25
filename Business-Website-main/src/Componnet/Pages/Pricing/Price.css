@@ -1,0 +1,163 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+.snip1404 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+  max-width: 1200px; /* Adjusted for more cards */
+  margin: 50px auto; /* Centered and auto margin for responsiveness */
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for responsive design */
+  justify-content: space-between; /* Space between the cards */
+}
+
+.snip1404 img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.snip1404 .plan {
+  margin: 8px 0;
+  width: 25%; /* Adjusted width for 8 cards */
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #ffaa18;
+  box-shadow: 0 0 5px #e49b1d8b(242, 237, 237, 0.3);
+  background-color: #e49b1d8b;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  transition: all 0.25s ease-out;
+}
+
+.snip1404 .plan:hover {
+  transform: translateY(-5px); /* Hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.92); /* Enhanced shadow on hover */
+}
+
+.snip1404 header {
+  background-color:#e7960a;
+  color: #ffffff;
+}
+
+.snip1404 .plan-title {
+  background-color: rgba(0, 0, 0, 0.92);
+  position: relative;
+  margin: 0;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2em; /* Slightly larger font size */
+}
+
+.snip1404 .plan-title:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 300px 0 0;
+  border-color:  rgb(0, 0, 0) transparent transparent;
+}
+
+.snip1404 .plan-cost {
+  padding: 20px;
+  text-align: right;
+}
+
+.snip1404 .plan-price {
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+.snip1404 .plan-type {
+  opacity: 0.8;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.snip1404 .plan-features {
+  padding: 0 0 20px;
+  margin: 0;
+  list-style: none; /* Removed default list styling */
+}
+
+.snip1404 .plan-features li {
+  padding: 8px 5%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Added separators */
+}
+
+.snip1404 .plan-features i {
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.snip1404 .plan-select {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.snip1404 .plan-select a {
+  background-color: #d97706;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 0.75em;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.snip1404 .plan-select a:hover {
+  background-color: #e49b1d8b;
+}
+
+.snip1404 .featured {
+  margin-top: -10px;
+  border-color: #331926;
+  box-shadow: 0 0 25px #e49b1d8b(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.snip1404 .featured .plan-select {
+  padding: 30px 20px;
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 1200px) {
+  .snip1404 .plan {
+    width: 45%; /* Adjusted width for medium screens */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .snip1404 .plan {
+    width: 100%; /* Full width on small screens */
+  }
+  .snip1404 .featured {
+    margin-top: 0;
+  }
+}
+.select-plan-button {
+  background-color: #ffaa18; /* Adjust to your desired color */
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.select-plan-button:hover {
+  background-color: #d97706; /* Adjust to your desired hover color */
+}

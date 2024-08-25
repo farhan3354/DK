@@ -1,0 +1,144 @@
+.tree-container {
+    perspective: 2000px; /* Increased perspective for a more immersive 3D effect */
+    padding: 2rem;
+    background: #f3f4f6; /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tree-card {
+    width: 100%;
+    max-width: 30px; /* Adjusted for larger screens */
+    height: 200px;
+    background: #ffffff;
+    border: 4px solid #fbbf24;
+    border-radius: 25px; /* Fully rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* Smooth transitions */
+    transform: rotateY(-30deg) rotateX(20deg); /* Enhanced 3D transformation */
+  }
+  
+  .tree-card-content {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, #ffffff, #e2e8f0); /* Subtle gradient for depth */
+    border-radius: 20px; /* Rounded corners for inner content */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transform: rotateX(0deg); /* Ensure text inside does not tilt */
+  }
+  
+  .tree-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+  }
+  
+  .tree-card-text {
+    font-size: 1.125rem;
+    color: #666666;
+  }
+  
+  .tree-node-container {
+    position: relative;
+    transform-style: preserve-3d;
+    margin-bottom: 2.5rem; /* Margin for spacing between nodes */
+    transition: transform 0.6s ease-in-out;
+    animation: bounceIn 1s ease-out; /* Bounce-in animation */
+  }
+  
+  .tree-connector {
+    border-left: 3px solid #d1d5db;
+    height: auto;
+    margin-top: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px; /* Rounded corners for connectors */
+    background: linear-gradient(to bottom, #ffffff, #f3f4f6); /* Subtle gradient */
+  }
+  
+  .tree-level {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    align-items: flex-end;
+    transform-style: preserve-3d;
+    margin-top: 2rem; /* Added margin for better spacing */
+  }
+  
+  @media (max-width: 768px) {
+    .tree-card {
+      max-width: 220px; /* Adjust card width for tablets */
+    }
+  
+    .tree-card-title {
+      font-size: 1.25rem; /* Adjust font size for tablets */
+    }
+  
+    .tree-card-text {
+      font-size: 1rem; /* Adjust font size for tablets */
+    }
+  
+    .tree-node-container {
+      margin-bottom: 2rem; /* Reduce margin for tablets */
+    }
+  
+    .tree-connector {
+      height: 70px; /* Adjust height of connectors for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tree-card {
+      max-width: 160px; /* Further adjust card width for mobile screens */
+    }
+  
+    .tree-card-title {
+      font-size: 1rem; /* Further adjust font size for mobile screens */
+    }
+  
+    .tree-card-text {
+      font-size: 0.875rem; /* Further adjust font size for mobile screens */
+    }
+  
+    .tree-node-container {
+      margin-bottom: 1.5rem; /* Further reduce margin for mobile screens */
+    }
+  
+    .tree-connector {
+      height: 60px; /* Further adjust height of connectors for mobile screens */
+    }
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

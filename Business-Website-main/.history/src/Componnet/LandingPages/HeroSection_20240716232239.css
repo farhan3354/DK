@@ -1,0 +1,14 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Optionally, add a slight upward translation */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeIn 3s ease; /* Adjust timing and easing as needed */
+}

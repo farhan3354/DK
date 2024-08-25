@@ -1,0 +1,131 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { FaCode, FaGlobe, FaEye, FaUsers } from 'react-icons/fa';
+import Copy from './Copy';
+import Investor from './Investor';
+import Vedio from '../../LandingPages/Vedio';
+const OutStory = () => {
+  return (
+    <div className='bg-white p-4 md:p-12'>
+      <div className="text-center mb-12 flex flex-col items-center ">
+        <h1 className="text-5xl font-bold text-yellow-500 m-5">Our Story</h1>
+        <p className="mt-4 text-base">
+          DK Group is a renowned financial institution committed to excellence,<br />
+          providing comprehensive services globally with a focus on transparency and<br />
+          community-driven initiatives.
+        </p>
+      </div>
+
+      <div className=" px-4 sm:px-6 lg:px-8 ">
+  <h1 className='font-bold text-xl sm:text-2xl lg:text-3xl ml-60   my-4 sm:my-8'>
+    What drives Dk Group?
+  </h1>
+  <p className=' sm:text-lg lg:text-xl text-center mx-2 sm:mx-4 lg:mx-8'>
+  DK Group is driven by a commitment to excellence, transparency, and community empowerment, <br/>ensuring sustainable growth and positive
+  impact globally.
+</p>
+
+</div>
+
+
+<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 m-10'>
+  <Link to='http://localhost:5173/' className='transform transition duration-300 hover:scale-105'>
+    <div className='bg-yellow-500 border rounded-2xl shadow-2xl p-4'>
+      <h1 className='font-bold text-2xl m-3'>
+        <FaCode className="inline mr-2" /> Home
+      </h1>
+      <p className='pl-6'>
+        Open source
+        DK Group operates as an open-source <br />
+        platform, fostering collaboration and innovation with<br />
+        its community-focused initiatives.
+      </p>
+    </div>
+  </Link>
+
+  <Link to='http://localhost:5173/projects' className='transform transition duration-300 hover:scale-105'>
+    <div className='bg-yellow-500 border rounded-2xl shadow-2xl p-4'>
+      <h1 className='font-bold text-2xl m-3'>
+        <FaGlobe className="inline mr-2" /> Project
+      </h1>
+      <p className='pl-6'>
+        Open source
+        DK Group operates as an open-source <br />
+        platform, fostering collaboration and innovation with<br />
+        its community-focused initiatives.
+      </p>
+    </div>
+  </Link>
+
+  <Link to='/plans' className='transform transition duration-300 hover:scale-105'>
+    <div className='bg-yellow-500 border rounded-2xl shadow-2xl p-4'>
+      <h1 className='font-bold text-2xl m-3'>
+        <FaEye className="inline mr-2" /> Plans
+      </h1>
+      <p className='pl-6'>
+        Open source
+        DK Group operates as an open-source <br />
+        platform, fostering collaboration and innovation with<br />
+        its community-focused initiatives.
+      </p>
+    </div>
+  </Link>
+
+  <Link to='http://localhost:5173/contact' className='transform transition duration-300 hover:scale-105'>
+    <div className='bg-yellow-500 border rounded-2xl shadow-2xl p-4'>
+      <h1 className='font-bold text-2xl m-3'>
+        <FaUsers className="inline mr-2" /> Contact Us
+      </h1>
+      <p className='pl-6'>
+        Open source
+        DK Group operates as an open-source <br />
+        platform, fostering collaboration and innovation with<br />
+        its community-focused initiatives.
+      </p>
+    </div>
+  </Link>
+</div>
+
+
+      <div className='flex flex-col items-center md:flex-row md:justify-center p-4'>
+  <div className='my-6 md:mx-4 md:w-1/2'>
+    <h1 className='font-bold text-2xl m-4 text-center md:text-left'>Our Mission</h1>
+    <p className='text-center md:text-left'>_______________________________________________________________________</p>
+    <p className='border-t border-b my-2 md:my-4 md:border-none text-center md:text-left'>
+      At DK Group, our mission is to empower individuals by strategically multiplying their investments across diverse projects and various digital assets. We believe in the transformative power of strategic investments, aiming not only to generate wealth but to do so with integrity, security, and purpose. Our commitment extends beyond profits; we are dedicated to creating opportunities for our clients and communities alike.
+    </p>
+    <p className='mt-4 md:mt-8 text-center md:text-left'>
+      Through our innovative approach, we strive to provide monthly returns on investments, ensuring a steady income stream for our clients. Our focus on diversity, both in projects and digital assets, allows us to mitigate risks and maximize returns. With a dedication to excellence and a vision for social impact, we invite you to join us in rewriting the story of success through responsible investing.
+    </p>
+  </div>
+  <img className='h-48 w-full object-cover md:h-96 md:w-auto' src="https://dkgroup.pk/wp-content/uploads/2024/03/Globe-image.png" alt="img" />
+</div>
+
+
+
+
+      <div className="text-center mb-12 flex flex-col items-center my-14">
+        <h1 className="text-4xl font-bold text-yellow-500 ">Timeline</h1>
+        <p className="mt-4 text-base">
+          DK Group timeline showcases a journey of growth, innovation<br />
+          and client-centric excellence, setting benchmarks in <br />the financial industry globally.
+        </p>
+      </div>
+      <Copy />
+      <Vedio/>
+
+      <div className="text-center mb-12 flex flex-col items-center">
+        <h1 className="text-5xl font-bold text-yellow-500 m-8">Investors</h1>
+        <p className="mt-4 text-base">
+          Investors
+          DK Group attracts investors seeking superior returns and ethical<br />
+          investment opportunities supported by robust financial<br />
+          expertise and a proven track record.
+        </p>
+      </div>
+      <Investor />
+    </div>
+  )
+}
+
+export default OutStory

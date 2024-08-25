@@ -1,0 +1,194 @@
+/* General styling */
+.wrapper {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --bg-color-alt: #666;
+    --main-color: #323232;
+    display: flex; 
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: var(--bg-color); /* Background color for the page */
+}
+
+/* switch card */
+.switch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 50px;
+    height: 20px;
+    margin-bottom: 30px; /* Space between the switch and the card */
+}
+
+.card-side::before,
+.card-side::after {
+    content: '';
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card-side::before {
+    content: 'Log in';
+    color: var(--font-color);
+    text-decoration: underline;
+}
+
+.card-side::after {
+    content: 'Sign up';
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    cursor: pointer;
+    background-color: var(--bg-color);
+    transition: 0.3s;
+    position: relative;
+}
+
+.slider:before {
+    box-sizing: border-box;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 0 var(--main-color);
+    transition: 0.3s;
+    position: absolute;
+    left: -2px;
+    bottom: 2px;
+}
+
+.toggle:checked + .slider {
+    background-color: var(--input-focus);
+}
+
+.toggle:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.toggle:checked ~ .card-side::before {
+    text-decoration: none;
+}
+
+.toggle:checked ~ .card-side::after {
+    text-decoration: underline;
+}
+
+/* card */
+.flip-card__inner {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.toggle:checked ~ .flip-card__inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    transition: transform 0.8s;
+    position: absolute;
+}
+
+.flip-card__front {
+    transform: rotateY(0deg);
+}
+
+.flip-card__back {
+    transform: rotateY(180deg);
+    position: absolute;
+}
+
+.flip-card__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.flip-card__input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+}
+
+.flip-card__input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+
+.flip-card__input:focus {
+    border: 2px solid var(--input-focus);
+}
+
+.flip-card__btn {
+    margin: 20px 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flip-card__btn:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+}

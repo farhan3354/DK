@@ -1,0 +1,117 @@
+.tree-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .tree-card {
+    width: 100%;
+    max-width: 320px; /* Adjusted max-width for larger cards */
+    height: 260px; /* Adjusted height to fit content and button */
+    background: #ffffff;
+    border: 4px solid #fbbf24;
+    border-radius: 25px; /* Fully rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* Smooth transitions */
+    transform: rotateY(-30deg) rotateX(20deg); /* Enhanced 3D transformation */
+  }
+  
+  .tree-card-content {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, #ffffff, #e2e8f0); /* Subtle gradient for depth */
+    border-radius: 20px; /* Rounded corners for inner content */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transform: rotateX(0deg); /* Ensure text inside does not tilt */
+  }
+  
+  .tree-card-title {
+    font-size: 1.75rem; /* Larger font size */
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+  }
+  
+  .tree-card-text {
+    font-size: 1.25rem; /* Larger font size */
+    color: #666666;
+    margin-bottom: 1rem; /* Space above button */
+  }
+  
+  .tree-card-text p {
+    margin: 0.5rem 0; /* Space between lines of text */
+  }
+  
+  .tree-card-button {
+    background-color: #fbbf24; /* Button color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 10px; /* Rounded button corners */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .tree-card-button:hover {
+    background-color: #f59e0b; /* Darker button color on hover */
+  }
+  
+  .tree-level {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 2rem; /* Space between levels */
+  }
+  
+  .tree-node-container {
+    margin: 0 1rem; /* Space between cards */
+  }
+  
+  @media (max-width: 768px) {
+    .tree-card {
+      max-width: 280px; /* Adjust card width for tablets */
+    }
+  
+    .tree-card-title {
+      font-size: 1.5rem; /* Adjust font size for tablets */
+    }
+  
+    .tree-card-text {
+      font-size: 1.125rem; /* Adjust font size for tablets */
+    }
+  
+    .tree-card-button {
+      font-size: 0.875rem; /* Adjust button font size for tablets */
+    }
+  
+    .tree-node-container {
+      margin-bottom: 2rem; /* Reduce margin for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tree-card {
+      max-width: 200px; /* Further adjust card width for mobile screens */
+    }
+  
+    .tree-card-title {
+      font-size: 1.25rem; /* Further adjust font size for mobile screens */
+    }
+  
+    .tree-card-text {
+      font-size: 1rem; /* Further adjust font size for mobile screens */
+    }
+  
+    .tree-card-button {
+      font-size: 0.75rem; /* Further adjust button font size for mobile screens */
+    }
+  
+    .tree-node-container {
+      margin-bottom: 1.5rem; /* Further reduce margin for mobile screens */
+    }
+  }
+  

@@ -1,0 +1,67 @@
+.tree-container {
+    perspective: 1x; /* Increase perspective for a deeper 3D effect */
+    padding: 2rem;
+    background: #f3f4f6; /* Light background for contrast */
+  }
+  
+  .tree-card {
+    width: 240px;
+    height: 160px;
+    margin-top: 32px;
+    background: #ffffff;
+    border: 3px solid #fbbf24;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s; /* Smooth transitions */
+    transform: rotateY(-20deg) rotateX(15deg); /* Default 3D transformation */
+  }
+  
+  .tree-card-content {
+    padding: 16px;
+    transform: rotateX(0deg); /* Ensure text inside does not tilt */
+    background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  }
+  
+  .tree-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+  
+  .tree-card-text {
+    font-size: 1.125rem;
+    color: #666666;
+  }
+  
+  .tree-node-container {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateX(0deg); /* Default alignment */
+  }
+  
+  .tree-connector {
+    border-left: 2px solid #d1d5db;
+    height: 80px;
+    margin-top: 16px;
+    position: relative;
+  }
+  
+  .tree-level {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform-style: preserve-3d;
+  }
+  
+  /* Ensure the nodes are spaced evenly and aligned properly */
+  .tree-node-container:nth-child(even) .tree-card {
+    transform: rotateY(-30deg) rotateX(10deg); /* Slight adjustment for even nodes */
+  }
+  
+  .tree-node-container:nth-child(odd) .tree-card {
+    transform: rotateY(30deg) rotateX(10deg); /* Slight adjustment for odd nodes */
+  }
+  

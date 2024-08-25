@@ -1,0 +1,113 @@
+.tree-container {
+    perspective: 1500px; /* Perspective for a deeper 3D effect */
+    padding: 2rem;
+    background: #f3f4f6; /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tree-card {
+    width: 100%;
+    max-width: 240px; /* Maximum width for larger screens */
+    height: auto;
+    padding: 1rem;
+    background: #ffffff;
+    border: 3px solid #fbbf24;
+    border-radius: 20px; /* Fully rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s; /* Smooth transitions */
+    transform: rotateY(-20deg) rotateX(15deg); /* Default 3D transformation */
+  }
+  
+  .tree-card-content {
+    padding: 1rem;
+    transform: rotateX(0deg); /* Ensure text inside does not tilt */
+    background: linear-gradient(to bottom, #ffffff, #f9fafb);
+    border-radius: 15px; /* Rounded corners for inner content */
+  }
+  
+  .tree-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+  
+  .tree-card-text {
+    font-size: 1rem;
+    color: #666666;
+  }
+  
+  .tree-node-container {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateX(0deg); /* Default alignment */
+    margin-bottom: 2rem; /* Margin for spacing between nodes */
+  }
+  
+  .tree-connector {
+    border-left: 2px solid #d1d5db;
+    height: auto;
+    margin-top: 1rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px; /* Rounded corners for connectors */
+  }
+  
+  .tree-level {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    align-items: flex-end;
+    transform-style: preserve-3d;
+  }
+  
+  @media (max-width: 768px) {
+    .tree-card {
+      max-width: 180px; /* Adjust card width for tablets and smaller screens */
+    }
+  
+    .tree-card-title {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  
+    .tree-card-text {
+      font-size: 0.875rem; /* Adjust font size for smaller screens */
+    }
+  
+    .tree-node-container {
+      margin-bottom: 1.5rem; /* Reduce margin for smaller screens */
+    }
+  
+    .tree-connector {
+      height: 60px; /* Adjust height of connectors for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tree-card {
+      max-width: 150px; /* Further adjust card width for mobile screens */
+    }
+  
+    .tree-card-title {
+      font-size: 0.875rem; /* Further adjust font size for mobile screens */
+    }
+  
+    .tree-card-text {
+      font-size: 0.75rem; /* Further adjust font size for mobile screens */
+    }
+  
+    .tree-node-container {
+      margin-bottom: 1rem; /* Further reduce margin for mobile screens */
+    }
+  
+    .tree-connector {
+      height: 50px; /* Further adjust height of connectors for mobile screens */
+    }
+  }
+  

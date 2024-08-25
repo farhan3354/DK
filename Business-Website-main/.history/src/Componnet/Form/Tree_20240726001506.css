@@ -1,0 +1,49 @@
+.tree-container {
+    perspective: 1000px; /* Adds perspective to the 3D effect */
+  }
+  
+  .tree-card {
+    width: 240px;
+    height: 160px;
+    margin-top: 32px;
+    background: white;
+    border: 3px solid #fbbf24;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform-style: preserve-3d; /* Allows 3D transformations */
+    transition: transform 0.3s;
+  }
+  
+  .tree-card-content {
+    padding: 16px;
+    transform: rotateX(10deg); /* Adds 3D tilt */
+  }
+  
+  .tree-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .tree-card-text {
+    font-size: 1rem;
+  }
+  
+  .tree-node-container {
+    position: relative;
+  }
+  
+  .tree-connector {
+    border-left: 2px solid #d1d5db;
+    height: 80px;
+    margin-top: 16px;
+  }
+  
+  .tree-level {
+    transform-style: preserve-3d;
+  }
+  
+  .tree-node-container:hover .tree-card {
+    transform: rotateX(15deg) rotateY(15deg); /* Adds hover effect for more depth */
+  }
+  
